@@ -15,10 +15,9 @@ public class Account {
 	public Account() {
 	}
 	
-	public Account(int newId, double newBalance, double newAnnualInterestRate) {
+	public Account(int newId, double newBalance) {
 		id = newId;
 		balance = newBalance;
-		annualInterestRate = newAnnualInterestRate;
 	}
 	
 	// Accessor methods:
@@ -38,6 +37,20 @@ public class Account {
 		return dateCreated.toString();
 	}
 	// :Accessor methods
+	
+	// Mutator methods:
+	public void setId(int newId) {
+		id = newId;
+	}
+	
+	public void setBalance(double newBalance) {
+		balance = newBalance;
+	}
+	
+	public void setAnnualInterestRate(double newAnnualInterestRate) {
+		annualInterestRate = newAnnualInterestRate;
+	}
+	// :Mutator methods
 	
 	public double getMonthlyInterestRate() {
 		return annualInterestRate / 12;
