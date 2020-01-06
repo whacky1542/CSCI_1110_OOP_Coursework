@@ -2,7 +2,7 @@
  * Author: Alex Johnson
  * Date: 12-11-2019
  * 
- *  
+ * This program is a blueprint for an object that represents an integer value.
  */
 
 public class MyInteger {
