@@ -2,14 +2,15 @@
  * Author: Alex Johnson
  * Date: 12-11-2019
  * 
- *  
+ * This class analyzes an integer value. Additionally, it can convert 
+ * character arrays and strings to integer values.
  */
 
 public class MyInteger {
 	private int value;
 	
-	public MyInteger(int value) {
-		value = this.value;
+	public MyInteger(int specifiedValue) {
+		value = specifiedValue;
 	}
 	
 	public int getValue() {
@@ -17,15 +18,18 @@ public class MyInteger {
 	}
 	
 	public boolean isEven() {
-		return (value % 2 == 0);
+		return value % 2 == 0;
 	}
 	
 	public boolean isOdd() {
-		return (value % 2 == 1);
+		return value % 2 == 1;
 	}
 	
 	public boolean isPrime() {
-		for (int i = 2; i < value; i++) {
+		if (value == 1)
+			return false;
+		
+		for (int i = 2; i <= Math.sqrt(value); i++) {
 			if (value % i == 0)
 				return false;
 		}
@@ -33,58 +37,61 @@ public class MyInteger {
 		return true;
 	}
 	
-	public static boolean isEven(int value) {
-		return (value % 2 == 0);
+	public static boolean isEven(int specifiedValue) {
+		return specifiedValue % 2 == 0;
 	}
 	
-	public static boolean isOdd(int value) {
-		return (value % 2 == 1);
+	public static boolean isOdd(int specifiedValue) {
+		return specifiedValue % 2 == 1;
 	}
 	
-	public static boolean isPrime(int value) {
-		for (int i = 2; i < value; i++) {
-			if (value % i == 0)
+	public static boolean isPrime(int specifiedValue) {
+		if (specifiedValue == 1)
+			return false;
+		
+		for (int i = 2; i < Math.sqrt(specifiedValue); i++) {
+			if (specifiedValue % i == 0)
 				return false;
 		}
 		
 		return true;
 	}
 	
-	public static boolean isEven(MyInteger value) {
-		return (value.isEven());
+	public static boolean isEven(MyInteger specifiedValue) {
+		return specifiedValue.isEven();
 	}
 	
-	public static boolean isOdd(MyInteger value) {
-		return (value.isOdd());
+	public static boolean isOdd(MyInteger specifiedValue) {
+		return specifiedValue.isOdd();
 	}
 	
-	public static boolean isPrime(MyInteger value) {
-		return (value.isPrime());
+	public static boolean isPrime(MyInteger specifiedValue) {
+		return specifiedValue.isPrime();
 	}
 	
-	public boolean equals(int value) {
-		return (value == this.value);
+	public boolean equals(int specifiedValue) {
+		return specifiedValue == value;
 	}
 	
-	public boolean equals(MyInteger value) {
-		return (value.value == this.value);
+	public boolean equals(MyInteger specifiedValue) {
+		return specifiedValue.value == value;
 	}
 	
 	public static int parseInt(char[] charValues) {
 		int sum = 0;
 		
 		for (int i = 0; i < charValues.length; i++) {
-			sum += Character.getNumericValue(charValues[i]);
+			sum += Character.getNumericValue(charValues[i]) * Math.pow(10, charValues.length - i - 1);
 		}
 		
 		return sum;
 	}
 	
-	public static int parseInt(String stringValue) {
+	public static int parseInt(String s) {
 		int sum = 0;
 		
-		for (int i = 0; i < stringValue.length(); i++) {
-			sum += Character.getNumericValue(stringValue.charAt(i));
+		for (int i = 0; i < s.length(); i++) {
+			sum += Character.getNumericValue(s.charAt(i)) * Math.pow(10, s.length() - i - 1);
 		}
 		
 		return sum;
