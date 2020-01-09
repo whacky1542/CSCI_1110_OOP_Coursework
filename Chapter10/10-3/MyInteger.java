@@ -2,8 +2,7 @@
  * Author: Alex Johnson
  * Date: 12-11-2019
  * 
- * This class analyzes an integer value. Additionally, it can convert 
- * character arrays and strings to integer values.
+ * This program is a blueprint for an object that represents an integer value.
  */
 
 public class MyInteger {
