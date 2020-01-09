@@ -10,37 +10,48 @@ import java.util.Scanner;
 public class ATM {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		
 		Account[] accounts = new Account[10];
+		int id;
 		
-		int id = 0;
-		do {
-			System.out.print("Enter an id: ");
-			id = input.nextInt();
-			if (!isValidId(id))
-				System.out.println("Invalid id");
-		} while (!isValidId(id));
+		for (int i = 0; i < accounts.length; i++) {
+			accounts[i] = new Account();
+			accounts[i].setBalance(100);
+		}
 		
-		System.out.println("Main menu:\n"
-				+ "1: check balance\n"
-				+ "2: withdraw\n"
-				+ "3: deposit\n"
-				+ "4: exit");
-		
-		int choice = 0;
-		do {
-			System.out.print("Enter a choice: ");
+		while (true) {
+			do {
+				System.out.print("Enter an ID(0-9): ");
+				id = input.nextInt();
+			} while (id < 0 && id > 9);
 			
-		} while (!isValidChoice(choice));
+			mainMenu(accounts[id]);
+		}
 	}
 	
-	public static boolean isValidId(int id) {
-		return id >= 0 && id <= 10;
+	public static void mainMenu(Account account) {
+		Scanner input = new Scanner(System.in);
+		int choice;
+		
+		do {
+			System.out.print("Main menu:\n"
+					+ "1:check balance\n"
+					+ "2:withdraw\n"
+					+ "3:deposit\n"
+					+ "4:exit\n"
+					+ "\n"
+					+ "Enter a choice: ");
+			choice = input.nextInt();
+			
+			if (choice == 1)
+				System.out.print("Current balance: " + account.getBalance() + "\n");
+			else if (choice == 2) {
+				System.out.print("Enter an amount to withdraw: ");
+				account.withdraw(input.nextDouble());
+			}
+			else if (choice == 3) {
+				System.out.print("Enter an amount to deposit: ");
+				account.deposit(input.nextDouble());
+			}
+		} while (choice != 4);
 	}
-	
-	public static boolean isValidChoice(int choice) {
-		return choice >= 1 && choice <= 4;
-	}
-	
-	
 }
