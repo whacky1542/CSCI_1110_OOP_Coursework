@@ -11,7 +11,10 @@ public class Test {
 		account.setAnnualInterestRate(2.5);
 		System.out.println(account.toString());
 		
-		SavingsAccount savingsAccount = new SavingsAccount(4321, 5000, 500);
+		SavingsAccount savingsAccount = new SavingsAccount(4444, 3000);
 		System.out.println(savingsAccount.toString());
+		
+		CheckingAccount checkingAccount = new CheckingAccount(4321, 5000, 500);
+		System.out.println(checkingAccount.toString());
 	}
 }
