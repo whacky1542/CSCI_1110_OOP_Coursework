@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Exercise12_15 {
 	public static void main(String[] args) throws FileNotFoundException {
@@ -24,10 +25,16 @@ public class Exercise12_15 {
 			}
 		}
 		
+		int[] array = new int[100];
 		try (Scanner input = new Scanner(file)) {
-			while (input.hasNext()) {
-				System.out.print(input.nextInt() + " ");
+			for (int i = 0; i < 100; i++) {
+				array[i] = input.nextInt();
 			}
+		}
+		
+		Arrays.sort(array);
+		for (int i = 0; i < 100; i++) {
+			System.out.print(array[i] + " ");
 		}
 	}
 }
