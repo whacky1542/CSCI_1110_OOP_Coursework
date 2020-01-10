@@ -17,7 +17,7 @@ public class SavingsAccount extends Account {
 	
 	public void withdraw(double amount) {
 		if (amount <= getBalance())
-			withdraw(amount);
+			super.withdraw(amount);
 		else
 			System.out.println("Transaction failed.");
 	}
