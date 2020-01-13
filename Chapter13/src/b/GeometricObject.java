@@ -1,11 +1,11 @@
-package colorable;
+package b;
 /*
  * Author: Introduction to Java Programming 10th edition Y. Daniel Liang
  * Date: 01-12-2020
  * 
  * This class defines an object that represents a geometric object.
  * 
- * I'm am using Daniel Liang work in conjunction with exercise 13-1 that
+ * I'm am using Daniel Liang work in conjunction with exercise 13-7 that
  * requires use of GeometricObject from class Triangle.
  */
 

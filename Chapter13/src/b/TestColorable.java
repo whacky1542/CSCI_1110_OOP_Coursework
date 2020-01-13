@@ -1,4 +1,4 @@
-package colorable;
+package b;
 /*
  * Author: Alex Johnson
  * Date: 01-13-2020
@@ -17,8 +17,10 @@ public class TestColorable {
 		for (int i = 0; i < objects.length; i++) {
 			System.out.println("t" + (i + 1) + " area: " + objects[i].getArea());
 			if (objects[i] instanceof Colorable) {
-				System.out.println("t" + (i + 1) + "how to eat: " + (Colorable)objects[i].howToColor());
+				System.out.print("t" + (i + 1) + " how to color: ");
+				((Colorable)objects[i]).howToColor();
 			}
+			System.out.println();
 		}
 		
 	}

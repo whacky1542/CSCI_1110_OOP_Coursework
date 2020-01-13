@@ -1,4 +1,4 @@
-package colorable;
+package b;
 /*
  * Author: Alex Johnson
  * Date: 01-12-2020
@@ -7,12 +7,14 @@ package colorable;
  */
 
 public class Triangle extends GeometricObject implements Colorable{
-	private double side1 = 1.0;
-	private double side2 = 1.0;
-	private double side3 = 1.0;
+	private double side1;
+	private double side2;
+	private double side3;
 	
 	public Triangle() {
-		
+		side1 = 1.0;
+		side2 = 1.0;
+		side3 = 1.0;
 	}
 	
 	public Triangle(double side1, double side2, double side3, String color, boolean filled) {
@@ -47,8 +49,14 @@ public class Triangle extends GeometricObject implements Colorable{
 	}
 	
 	public double getArea() {
-		double s = (side1 + side2 + side3) / 2;
-		return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+		if (side1 + side2 == side3 || side1 + side3 == side2 || side2 + side3 == side1) {
+			System.out.println("Impossible triangle.");
+			return 0;
+		}
+		else {
+			double s = (side1 + side2 + side3) / 2;
+			return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+		}
 	}
 	
 	public double getPerimeter() {
