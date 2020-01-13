@@ -6,17 +6,17 @@
  * Making a class abstract means that it is meant as a base for subclasses that are themselves supposed
  * to be used.
  */
-public abstract class GeometricObject {
+public abstract class GeometricObject2 {
 	private String color = "white";
 	private boolean filled;
 	private java.util.Date dateCreated;
 	
 	// The constructors are only used by subclasses of geo thus they are protected.
-	protected GeometricObject() {
+	protected GeometricObject2() {
 		dateCreated = new java.util.Date();
 	}
 	
-	protected GeometricObject(String color, boolean filled) {
+	protected GeometricObject2(String color, boolean filled) {
 		dateCreated = new java.util.Date();
 		this.color = color;
 		this.filled = filled;
