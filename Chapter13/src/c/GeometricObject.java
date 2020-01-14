@@ -64,8 +64,4 @@ public abstract class GeometricObject {
 
 	/** Abstract method getPerimeter */
 	public abstract double getPerimeter();
-	
-	public Object clone() throws CloneNotSupportedException {
-		return super.clone();
-	}
 }
