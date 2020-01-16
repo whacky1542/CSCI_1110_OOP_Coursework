@@ -17,7 +17,7 @@ public class Test extends Application{
 		ClockPane clock = new ClockPane();
 		clock.setSecondHandVisible(false);
 		clock.setHour((int) (Math.random() * 12));
-		clock.setMinute((int) (Math.random() * 31));
+		clock.setMinute((int) (Math.round(Math.random()) * 30));
 		String time = clock.getHour() + ":" + clock.getMinute() + ":" + clock.getSecond();
 		Label lblTime = new Label(time);
 		
