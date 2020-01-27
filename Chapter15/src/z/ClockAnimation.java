@@ -25,7 +25,7 @@ public class ClockAnimation extends Application {
 		animation.play(); // Start animation
 
 		// Create a scene and place it in the stage
-		Scene scene = new Scene(clock, 250, 50);
+		Scene scene = new Scene(clock, 250, 250);
 		primaryStage.setTitle("ClockAnimation"); // Set the stage title
 		primaryStage.setScene(scene); // Place the scene in the stage
 		primaryStage.show(); // Display the stage

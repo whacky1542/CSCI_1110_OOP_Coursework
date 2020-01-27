@@ -1,5 +1,11 @@
 package b;
-
+/*
+ * Author: Alex Johnson
+ * Date: 01-27-2020
+ * 
+ * This application plays a neat little animation of a rectangle following
+ * the path of a pentagon.
+ */
 import javafx.animation.Animation;
 import javafx.animation.FadeTransition;
 import javafx.animation.Animation.Status;
