@@ -1,4 +1,8 @@
 package z;
+/*
+ * Summary: This program reads the data created by TestObjectOutputStream. Keep note that the
+ * objects must be read back in the order and type that they were originally put into the file.
+ */
 
 import java.io.*;
 

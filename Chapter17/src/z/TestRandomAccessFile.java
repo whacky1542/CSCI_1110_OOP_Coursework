@@ -1,4 +1,15 @@
 package z;
+/*
+ * Summary: This program makes use of RandomAccessFile class that alters the default way that
+ * streams are setup. To elaborate, streams, by default, are setup as read-only or write-only.
+ * Using this new class, the stream is now referred to as a random-access file that can now be
+ * modified in many more ways.
+ * 
+ * You can use the specifications "r" and "rw" for read only, or read and write.
+ * 
+ * This program is actually dope though. Read through the program to understand the basics
+ * of file manipulation when it comes to RAF.
+ */
 
 import java.io.*;
 

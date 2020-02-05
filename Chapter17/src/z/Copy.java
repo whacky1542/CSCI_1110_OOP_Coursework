@@ -1,4 +1,22 @@
 package z;
+/*
+ * Summary: This program checks if the correct syntax was used, if the source exists, and if
+ * the target exists. After that, it sets up a try block, for auto closing of streams, to copy
+ * and paste the contents of source to the contents of target. -1 indicates the end of the file.
+ * numberOfBytesCopied is an added bonus. r is converted into a primitive type for the sake of
+ * the IDE, so casting it as a (byte) is necessary for it to be sent to the target file.
+ * 
+ * As an INFP, I'm destined to understand the emotions of people to a master level degree.
+ * This is okay. That means I can continue on my path of being a video game developer to help
+ * people who play them understand their own lives better. That is my role.
+ * 
+ * Interfaces are useful because they are final, abstract, and publicly static. Basically,
+ * they are unbound bases that can be further detailed in the classes that they are implemented
+ * in. Additionally, since they are unbound, they're methods and final values can be accessed 
+ * from anywhere in any situation. As for the reason why only final values are used, I'm not
+ * exactly sure. But, my guess would be that using variables that can be changed from anywhere
+ * regardless of the situation is not practical and is bad programming practice.
+ */
 
 import java.io.*;
 

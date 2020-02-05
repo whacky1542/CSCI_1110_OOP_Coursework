@@ -1,4 +1,8 @@
 package z;
+/*
+ * Summary: This may not seem like it, but the way these objects (arrays) are read back from the
+ * data file is by serialization.
+ */
 
 import java.io.*;
 
