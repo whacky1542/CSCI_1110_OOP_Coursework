@@ -1,4 +1,4 @@
-package a;
+package exercise17_01;
 /*
  * Author: Alex Johnson
  * Date: 02-05-2020
@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class Exercise17_01 {
 	public static void main(String[] args) throws IOException {
-		File file = new File("Exercise17_01.txt");
+		File file = new File("src/exercise17_01/Exercise17_01.txt");
 		int[] numbers = new int[100];
 		for (int i = 0; i < 100; i++)
 			numbers[i] = ((int) (Math.round(Math.random() * 10000)));

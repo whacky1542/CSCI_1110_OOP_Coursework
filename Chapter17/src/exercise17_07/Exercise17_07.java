@@ -1,4 +1,4 @@
-package c;
+package exercise17_07;
 /*
  * Author: Alex Johnson
  * Date: 02-06-2020
@@ -18,7 +18,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class Exercise17_07 {
-	private static File file = new File("Exercise17_07.dat");
+	private static File file = new File("src/exercise17_07/Exercise17_07.dat");
 	private static ArrayList<Loan> loans = new ArrayList<Loan>();
 	private static double sum = 0.0;
 	

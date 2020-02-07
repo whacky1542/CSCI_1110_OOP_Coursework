@@ -1,4 +1,4 @@
-package z;
+package notes.L8;
 /*
  * Summary: This program makes use of RandomAccessFile class that alters the default way that
  * streams are setup. To elaborate, streams, by default, are setup as read-only or write-only.
@@ -16,7 +16,7 @@ import java.io.*;
 public class TestRandomAccessFile {
 	public static void main(String[] args) throws IOException {
 		try ( // Create a random access file
-				RandomAccessFile inout = new RandomAccessFile("inout.dat", "rw");) {
+				RandomAccessFile inout = new RandomAccessFile("src/notes/L8/input.dat", "rw");) {
 			// Clear the file to destroy the old contents if exists
 			inout.setLength(0);
 

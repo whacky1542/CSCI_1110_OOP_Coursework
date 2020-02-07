@@ -1,4 +1,4 @@
-package z;
+package notes.L4;
 /*
  * Summary: This program checks if the correct syntax was used, if the source exists, and if
  * the target exists. After that, it sets up a try block, for auto closing of streams, to copy

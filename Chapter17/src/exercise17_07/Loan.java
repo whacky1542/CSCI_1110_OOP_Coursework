@@ -1,4 +1,4 @@
-package c;
+package exercise17_07;
 /*
  * Author: Alex Johnson
  * Date: 02-06-2020

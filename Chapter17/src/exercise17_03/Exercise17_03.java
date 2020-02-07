@@ -1,4 +1,4 @@
-package b;
+package exercise17_03;
 /*
  * Author: Alex Johnson
  * Date: 02-06-2020
@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class Exercise17_03 {
 	public static void main(String[] args) throws IOException {
-		File file = new File("Exercise17_03.dat");
+		File file = new File("src/exercise17_03/Exercise17_03.dat");
 		int sum = 0;
 		
 		if (file.exists()) {
