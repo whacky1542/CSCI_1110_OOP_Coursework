@@ -1,4 +1,4 @@
-package z;
+package notes;
 /*
  * Summary: This uses the same idea as the other recursive helper example, but is a little bit more in depth.
  */

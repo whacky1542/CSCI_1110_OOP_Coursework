@@ -1,4 +1,4 @@
-package z;
+package notes;
 /*
  * Summary: This specific program using the recursive helper with more arguments to make for a better and more 
  * efficiently implemented isPalindrome method.

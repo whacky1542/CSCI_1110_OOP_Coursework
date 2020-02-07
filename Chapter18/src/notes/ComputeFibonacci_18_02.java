@@ -1,4 +1,4 @@
-package z;
+package notes;
 /*
  * Summary: The complicated part is thinking recursively. Otherwise, the programming and implementation of 
  * recursivity is quite straight forward.

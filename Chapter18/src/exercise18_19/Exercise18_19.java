@@ -1,11 +1,16 @@
-package z;
+package exercise18_19;
+/*
+ * Modified by: Alex Johnson
+ * Date: 02-07-2020
+ * 
+ * This program makes a Sierpinski Triangle using a recursive method.
+ */
 
 import javafx.application.Application;
 import javafx.geometry.Point2D;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -13,18 +18,21 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
 
-public class SierpinskiTriangle_18_9 extends Application {
+public class Exercise18_19 extends Application {
 	@Override // Override the start method in the Application class
 	public void start(Stage primaryStage) {
 		SierpinskiTrianglePane trianglePane = new SierpinskiTrianglePane();
-		TextField tfOrder = new TextField();
-		tfOrder.setOnAction(e -> trianglePane.setOrder(Integer.parseInt(tfOrder.getText())));
-		tfOrder.setPrefColumnCount(4);
-		tfOrder.setAlignment(Pos.BOTTOM_RIGHT);
+		Button plus = new Button("+");
+		plus.setOnAction(e -> trianglePane.setOrder(trianglePane.getOrder() + 1));
+		Button minus = new Button("-");
+		minus.setOnAction(e -> {
+			if (trianglePane.getOrder() != 0)
+				trianglePane.setOrder(trianglePane.getOrder() - 1);
+		});
 
 		// Pane to hold label, text field, and a button
 		HBox hBox = new HBox(10);
-		hBox.getChildren().addAll(new Label("Enter an order: "), tfOrder);
+		hBox.getChildren().addAll(minus, plus);
 		hBox.setAlignment(Pos.CENTER);
 
 		BorderPane borderPane = new BorderPane();
@@ -39,11 +47,18 @@ public class SierpinskiTriangle_18_9 extends Application {
 
 		scene.widthProperty().addListener(ov -> trianglePane.paint());
 		scene.heightProperty().addListener(ov -> trianglePane.paint());
+		
+		trianglePane.setOrder(0);
 	}
 
 	/** Pane for displaying triangles */
 	static class SierpinskiTrianglePane extends Pane {
 		private int order = 0;
+		
+		/** Get the order */
+		public int getOrder() {
+			return order;
+		}
 
 		/** Set a new order */
 		public void setOrder(int order) {
@@ -86,5 +101,9 @@ public class SierpinskiTriangle_18_9 extends Application {
 				displayTriangles(order - 1, p31, p23, p3);
 			}
 		}
+	}
+	
+	public static void main(String[] args) {
+		Application.launch(args);
 	}
 }

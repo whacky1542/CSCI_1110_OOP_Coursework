@@ -1,4 +1,4 @@
-package z;
+package notes;
 /*
  * Summary: This is actually kinda dope. The process here is a string that shrinks with each iteration through
  * the method. As long as the numbers opposite of each other are the same each iteration, eventually, the string

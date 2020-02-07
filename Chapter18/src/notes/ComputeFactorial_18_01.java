@@ -1,4 +1,4 @@
-package z;
+package notes;
 /*
  * Summary: For example, the factorial of 4 is 24. Another example would be 3628800 from 10. The effect of recursion
  * is that of exponential repetition.
